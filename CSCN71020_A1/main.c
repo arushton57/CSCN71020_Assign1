@@ -21,7 +21,9 @@ void main() {
 	{
 	case 1:
 		add();
-	
+	}
+	switch (inputNum)
+	{
 	case 2:
 		subtract();
 	}
@@ -47,7 +49,13 @@ void add() {
 	printf("Enter the second value:");
 	scanf_s("%lf", &num2);
 	result = num1 + num2;
-	printf("%lf + %lf = %lf\n", num1, num2, result);
+	if (scanf_s("%lf", &num1,num2)==1) {
+		printf("%lf + %lf = %lf\n", num1, num2, result);
+	}
+	else {
+		printf("Not a number \n");
+	}
+
 }
 
 void subtract() {
@@ -57,5 +65,11 @@ void subtract() {
 	printf("Enter the second value:");
 	scanf_s("%lf", &num2);
 	result = num2 - num1;
-	printf("%lf - %lf = %lf\n", num2, num1, result);
+	if (scanf_s("%lf",&num1,num2)==1) {
+		printf("%lf - %lf = %lf\n", num2, num1, result);
+	}
+	else {
+		printf("Not a number \n");
+	}
+
 }
